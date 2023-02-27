@@ -1,11 +1,11 @@
 # FOR-SCRIPTS
 
-The Roots Team consist of a well developed team with a variety of skillsets from different backgrounds.
+The Roots Team consist of a well developed team with a variety of skillsets from different backgrounds. 
 
-Geneva Knott- Marine Corps Veteran
+**Geneva Knott- Marine Corps Veteran**
 
-Joshua Phipps- Army Veteran
+**Joshua Phipps- Army Veteran**
 
-Andrew Perry-Army Veteran
+**Andrew Perry-Army Veteran**
 
-Ademola OlatunBosun-Army Veteran
+**Ademola OlatunBosun-Army Veteran**
