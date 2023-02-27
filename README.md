@@ -2,10 +2,4 @@
 
 The Roots Team consist of a well developed team with a variety of skillsets from different backgrounds. 
 
-**Geneva Knott- Marine Corps Veteran**
-
-**Joshua Phipps- Army Veteran**
-
-**Andrew Perry-Army Veteran**
-
-**Ademola OlatunBosun-Army Veteran**
+**Geneva Knott (USMC Vet)**,**Joshua Phipps (Army Vet)**,**Andrew Perry (Army Vet)**,**Ademola OlatunBosun (Army Vet)**
