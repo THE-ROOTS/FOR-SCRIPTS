@@ -1,0 +1,28 @@
+#This script was created with the help of Justin H. as a team collaboration 
+# Team Roots Geneva, Andrew, Ademola, Joshua
+# 01 March 2023
+
+# Prompt the user for the new user's name and email address
+
+$Name = Read-Host "Enter the new user's name"
+$Email = Read-Host "Enter the new user's email address"
+
+# Create a new user account
+
+New-LocalUser -Name $Name -FullName $Name
+
+# Set the user's password to expire at first logon
+
+Set-LocalUser -Name $Name -PasswordNeverExpires:$false
+
+# Add the user to the Remote Desktop Users group
+
+Add-LocalGroupMember -Group "Remote Desktop Users" -Member $Name
+
+# Create a shared folder for the new user
+
+New-Item -Path "C:\Users\Public\Shares\$Name" -ItemType Directory
+$Acl = Get-Acl "C:\Users\Public\Shares\$Name"
+$Ar = New-Object System.Security.AccessControl.FileSystemAccessRule("$Name`$","FullControl","Allow")
+$Acl.SetAccessRule($Ar)
+Set-Acl "C:\Users\Public\Shares\$Name" $Acl
