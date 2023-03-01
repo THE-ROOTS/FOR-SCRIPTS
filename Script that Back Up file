@@ -1,0 +1,12 @@
+# Set the path to the file you want to back up
+$sourceFile = "C:\Users\joshp\Desktop\Pixel.bat"
+# Set the path to the directory where you want to save the backup
+$backupDirectory = "P:\PPBackup"
+# Set the name of the backup file (this will be the same as the original file, but with a timestamp added)
+$backupFileName = "File_$(Get-Date -Format '20230301_123200').txt"
+# Check if the backup directory exists; if not, create it
+if (!(Test-Path $backupDirectory)) {
+    New-Item -ItemType Directory -Path $backupDirectory
+}
+# Copy the file to the backup directory
+Copy-Item $sourceFile "$backupDirectory\$backupFileName"
