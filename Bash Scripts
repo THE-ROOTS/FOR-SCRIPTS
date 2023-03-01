@@ -1,0 +1,29 @@
+Bash
+#!/bin/bash
+# Team Roots (Geneva, Andrew, Ademola and Joshua) assistance from Justin H. 
+# 1 March 2023
+
+# Prompt for user information
+read -p "PixelPals: " fullname
+read -p "artist: " username
+read -s -p "0000: " password
+echo
+
+# Create new user with provided information
+sudo useradd -m -c "$fullname" -s /bin/bash "$username"
+echo "$username:$password" | sudo chpasswd
+
+# Add user to necessary groups
+sudo usermod -aG sudo "$username"
+
+
+# Enable automatic updates
+sudo apt-get install -y unattended-upgrades
+sudo dpkg-reconfigure -plow unattended-upgrades
+
+# Set up automatic backups
+sudo apt-get install -y rsync
+sudo mkdir /backup
+sudo chown root:root /backup
+sudo chmod 700 /backup
+sudo echo "0 2 * * * rsync -a /home /backup" | sudo tee /etc/cron.d/backup > /dev/null
