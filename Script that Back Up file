@@ -1,3 +1,7 @@
+#This code was created by team Roots (Geneva, Ademola, Andrew and Joshua)
+# This script is used to back up files and save them
+#Created 1 March 2023
+
 # Set the path to the file you want to back up
 $sourceFile = "C:\Users\joshp\Desktop\Pixel.bat"
 # Set the path to the directory where you want to save the backup
